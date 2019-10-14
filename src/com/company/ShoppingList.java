@@ -29,7 +29,13 @@ public class ShoppingList {
         String removedItemName = myShoppingList.get(position);
         System.out.println("Removing an item at position: " + (position+1) + " item name: " + removedItemName);
         myShoppingList.remove(position);
-
+    }
+    public String findItem(String item){
+        int itemIndex = myShoppingList.indexOf(item);
+        if (itemIndex >= 0){
+            return myShoppingList.get(itemIndex);
+        }
+        return null;
     }
 
 }
